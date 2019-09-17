@@ -10,9 +10,6 @@ var app = express();
 
 const PORT = process.env.PORTOS || 4000;
 
-console.log(process.env.PUBLIC_URL)
-console.log(PORT)
-
 app.use(express.static('public'));
 app.use('/resource', express.static(__dirname + '/resource'));
 app.use(cors());
