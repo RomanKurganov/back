@@ -8,7 +8,7 @@ dotenv.config();
 
 var app = express();
 
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORTOS || 4000;
 
 console.log(process.env.PUBLIC_URL)
 console.log(PORT)
