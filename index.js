@@ -10,6 +10,8 @@ var app = express();
 
 const PORT = process.env.PORT || 4000;
 
+console.log(PORT)
+
 app.use(express.static('public'));
 app.use('/resource', express.static(__dirname + '/resource'));
 app.use(cors());
@@ -23,6 +25,6 @@ mongoose.connect(process.env.DATABASE, {useNewUrlParser: true}, function (err) {
     }
     app.listen(PORT, function() {
         console.log("Сервер ожидает подключения...", PORT);
-        console.log(process.env.DATABASE)
+
     });
 });
