@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 4000;
 
 app.use(express.static('public'));
 app.use('/resource', express.static(__dirname + '/resource'));
-app.use(cors());
+app.use(cors({origin: '*'}));
 app.use(bodyParser.json());
 app.use("/api", url);
 

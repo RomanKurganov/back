@@ -3,7 +3,6 @@ const router = express.Router();
 const PortfolioController = require("../controllers/portfolio.controller");
 const FeedbackController = require("../controllers/feedback.controller");
 
-console.log(1111)
 router.get("/portfolio", PortfolioController.get_portfolio);
 
 router.get("/portfolio/:id", PortfolioController.get_portfolio_id);
