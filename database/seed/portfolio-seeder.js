@@ -1,8 +1,7 @@
 const mongoClient = require('../database.config');
-const dotenv = require('dotenv');
-dotenv.config();
 
 const pathUrl = (process.env.PORT || 'http://localhost:4000') + '/resource/';
+
 var portfolios = [
     {
         url : 'citis',
