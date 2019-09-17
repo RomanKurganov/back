@@ -10,6 +10,7 @@ var app = express();
 
 const PORT = process.env.PORT || 4000;
 
+console.log(process.env.PUBLIC_URL)
 console.log(PORT)
 
 app.use(express.static('public'));
