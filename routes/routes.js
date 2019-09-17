@@ -4,7 +4,7 @@ const PortfolioController = require("../controllers/portfolio.controller");
 const FeedbackController = require("../controllers/feedback.controller");
 
 
-router.get("/portfolio", PortfolioController.get_portfolio);
+router.get("/", PortfolioController.get_portfolio);
 
 router.get("/portfolio/:id", PortfolioController.get_portfolio_id);
 
