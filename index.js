@@ -8,9 +8,11 @@ dotenv.config();
 
 var app = express();
 
-const PORT = process.env.PORTOS || 4000;
+const PORT = process.env.PORT || 4000;
 
-app.use(express.static('public'));
+console.log(process.env.PORT)
+
+// app.use(express.static('public'));
 app.use('/resource', express.static(__dirname + '/resource'));
 app.use(cors());
 app.use(bodyParser.json());
