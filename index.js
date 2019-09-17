@@ -33,8 +33,6 @@ mongoose.connect(process.env.DATABASE, {useNewUrlParser: true}, function (err) {
 
     // var httpServer = http.createServer(app);
     var httpsServer = https.createServer({
-        key: fs.readFileSync('server.key'),
-        cert: fs.readFileSync('server.cert')
     }, app);
 
     // httpServer.listen(PORT, function () {
