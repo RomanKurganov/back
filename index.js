@@ -8,6 +8,7 @@ const url = require('./routes/routes');
 
 const http = require('http');
 const https = require('https');
+const fs = require('fs');
 
 const dotenv = require('dotenv');
 dotenv.config();
@@ -16,7 +17,7 @@ var app = express();
 
 const PORT = process.env.PORT || 4000;
 
-console.log(process.env.PORT)
+console.log(PORT)
 
 // app.use(express.static('public'));
 app.use('/resource', express.static(__dirname + '/resource'));
