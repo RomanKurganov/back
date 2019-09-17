@@ -22,6 +22,6 @@ mongoose.connect(process.env.DATABASE, {useNewUrlParser: true}, function (err) {
         return console.log(err);
     }
     app.listen(PORT, function() {
-        console.log("Сервер ожидает подключения...");
+        console.log("Сервер ожидает подключения...", PORT);
     });
 });
