@@ -1,8 +1,14 @@
 const express = require("express");
-const mongoose =require("mongoose");
+const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const url = require('./routes/routes');
+
+
+
+const http = require('http');
+const https = require('https');
+
 const dotenv = require('dotenv');
 dotenv.config();
 
@@ -23,7 +29,18 @@ mongoose.connect(process.env.DATABASE, {useNewUrlParser: true}, function (err) {
     if (err) {
         return console.log(err);
     }
-    app.listen(PORT, function() {
+
+    // var httpServer = http.createServer(app);
+    var httpsServer = https.createServer({
+        key: fs.readFileSync('server.key'),
+        cert: fs.readFileSync('server.cert')
+    }, app);
+
+    // httpServer.listen(PORT, function () {
+    //     console.log("Сервер ожидает подключения...", PORT);
+    //
+    // });
+    httpsServer.listen(PORT, function () {
         console.log("Сервер ожидает подключения...", PORT);
 
     });
