@@ -1,0 +1,21 @@
+{
+  "name": "back_node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon index.js",
+    "start-project": "yarn install && yarn start"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "mongodb": "^3.3.1",
+    "mongoose": "^5.6.5",
+    "nodemailer": "^6.3.0",
+    "nodemon": "^1.19.1",
+    "path": "^0.12.7"
+  }
+}
