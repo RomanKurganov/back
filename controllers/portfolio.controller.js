@@ -2,7 +2,6 @@ const Portfolio = require("../models/portfolio.model");
 
 /* получение всего перечня работ */
 exports.get_portfolio = (req, res) => {
-    console.log(res)
     Portfolio.find({})
         .then(portfolios => {
             res.status(200).json({data : portfolios})

@@ -1,6 +1,7 @@
 const mongoClient = require('../database.config');
 
-const pathUrl = (process.env.PORT || 'http://localhost:4000') + '/resource/';
+// const pathUrl = (process.env.PORT || 'http://localhost:4000') + '/resource/';
+const pathUrl = 'https://projectdbportfolio.herokuapp.com/resource/'
 
 var portfolios = [
     {
